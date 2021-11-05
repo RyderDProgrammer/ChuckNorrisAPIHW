@@ -29,13 +29,59 @@ namespace ChuckNorrisAPIFormApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.jokeButton = new System.Windows.Forms.Button();
+            this.jokeText = new System.Windows.Forms.Label();
+            this.jokeCombBox = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // jokeButton
+            // 
+            this.jokeButton.Location = new System.Drawing.Point(12, 75);
+            this.jokeButton.Name = "jokeButton";
+            this.jokeButton.Size = new System.Drawing.Size(307, 115);
+            this.jokeButton.TabIndex = 0;
+            this.jokeButton.Text = "Push me for a joke";
+            this.jokeButton.UseVisualStyleBackColor = true;
+            this.jokeButton.Click += new System.EventHandler(this.jokeButton_Click);
+            // 
+            // jokeText
+            // 
+            this.jokeText.AutoSize = true;
+            this.jokeText.Location = new System.Drawing.Point(444, 75);
+            this.jokeText.Name = "jokeText";
+            this.jokeText.Size = new System.Drawing.Size(27, 13);
+            this.jokeText.TabIndex = 1;
+            this.jokeText.Text = "joke";
+            // 
+            // jokeCombBox
+            // 
+            this.jokeCombBox.FormattingEnabled = true;
+            this.jokeCombBox.Location = new System.Drawing.Point(447, 168);
+            this.jokeCombBox.Name = "jokeCombBox";
+            this.jokeCombBox.Size = new System.Drawing.Size(121, 21);
+            this.jokeCombBox.TabIndex = 2;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.jokeCombBox);
+            this.Controls.Add(this.jokeText);
+            this.Controls.Add(this.jokeButton);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button jokeButton;
+        private System.Windows.Forms.Label jokeText;
+        private System.Windows.Forms.ComboBox jokeCombBox;
     }
 }
 

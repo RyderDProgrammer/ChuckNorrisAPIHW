@@ -16,5 +16,15 @@ namespace ChuckNorrisAPIFormApp
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            jokeText.Text = "";
+        }
+
+        private void jokeButton_Click(object sender, EventArgs e)
+        {
+            jokeText.Text = "Hi";
+        }
     }
 }
