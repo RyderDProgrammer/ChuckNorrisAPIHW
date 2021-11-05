@@ -47,7 +47,7 @@ namespace ChuckNorrisAPIFormApp
             // jokeText
             // 
             this.jokeText.AutoSize = true;
-            this.jokeText.Location = new System.Drawing.Point(444, 75);
+            this.jokeText.Location = new System.Drawing.Point(381, 75);
             this.jokeText.Name = "jokeText";
             this.jokeText.Size = new System.Drawing.Size(27, 13);
             this.jokeText.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace ChuckNorrisAPIFormApp
             // jokeCombBox
             // 
             this.jokeCombBox.FormattingEnabled = true;
-            this.jokeCombBox.Location = new System.Drawing.Point(447, 168);
+            this.jokeCombBox.Location = new System.Drawing.Point(384, 169);
             this.jokeCombBox.Name = "jokeCombBox";
             this.jokeCombBox.Size = new System.Drawing.Size(121, 21);
             this.jokeCombBox.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace ChuckNorrisAPIFormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(798, 450);
             this.Controls.Add(this.jokeCombBox);
             this.Controls.Add(this.jokeText);
             this.Controls.Add(this.jokeButton);
