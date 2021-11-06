@@ -60,6 +60,7 @@ namespace ChuckNorrisAPIFormApp
             this.jokeCombBox.Name = "jokeCombBox";
             this.jokeCombBox.Size = new System.Drawing.Size(121, 21);
             this.jokeCombBox.TabIndex = 2;
+            this.jokeCombBox.SelectedIndexChanged += new System.EventHandler(this.jokeCombBox_SelectedIndexChanged);
             // 
             // Form1
             // 

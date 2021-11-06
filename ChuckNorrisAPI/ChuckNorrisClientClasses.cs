@@ -39,6 +39,23 @@ namespace ChuckNorrisAPI
             }
         }
 
+        public async static Task<Joke> GetRandomJokeExcludeCategory(string excluded)
+        {
+            HttpResponseMessage response = await client.GetAsync("jokes/random?exclude=["+excluded+"]");
+            if (response.IsSuccessStatusCode)
+            {
+                var data = JsonConvert.DeserializeObject<SingleJokeResponse>(await response.Content.ReadAsStringAsync());
+                var joke = data.JokeData;
+                joke.JokeText = WebUtility.HtmlDecode(joke.JokeText);
+
+                return data.JokeData;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public async static Task<IEnumerable<Joke>> GetRandomJokes(int numJokes)
         {
             if (numJokes < 1)

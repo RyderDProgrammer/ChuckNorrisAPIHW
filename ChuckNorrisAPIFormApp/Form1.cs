@@ -35,15 +35,19 @@ namespace ChuckNorrisAPIFormApp
         {
             Joke j = await ChuckNorrisClient.GetRandomJoke();
             jokeText.Text = j.JokeText;
+            /*if (jokeCombBox.SelectedItem != j.Categories)
+            {
+                jokeText.Text = "";
+            }
+            else
+            {
+                jokeText.Text = j.JokeText;
+            }*/
         }
 
-        private async Task getCategories()
+        private void jokeCombBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            IEnumerable<string> categories = await ChuckNorrisClient.GetCategories();
-            foreach (var cat in categories)
-            {
-                jokeCombBox.Items.Add(cat);
-            }
+            jokeButton.Text = "Push me for a " + jokeCombBox.SelectedItem.ToString() + " joke";
         }
     }
 }
