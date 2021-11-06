@@ -32,6 +32,7 @@ namespace ChuckNorrisAPIFormApp
             this.jokeButton = new System.Windows.Forms.Button();
             this.jokeText = new System.Windows.Forms.Label();
             this.jokeCombBox = new System.Windows.Forms.ComboBox();
+            this.jokeCategory = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // jokeButton
@@ -62,11 +63,21 @@ namespace ChuckNorrisAPIFormApp
             this.jokeCombBox.TabIndex = 2;
             this.jokeCombBox.SelectedIndexChanged += new System.EventHandler(this.jokeCombBox_SelectedIndexChanged);
             // 
+            // jokeCategory
+            // 
+            this.jokeCategory.AutoSize = true;
+            this.jokeCategory.Location = new System.Drawing.Point(384, 231);
+            this.jokeCategory.Name = "jokeCategory";
+            this.jokeCategory.Size = new System.Drawing.Size(35, 13);
+            this.jokeCategory.TabIndex = 3;
+            this.jokeCategory.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 450);
+            this.Controls.Add(this.jokeCategory);
             this.Controls.Add(this.jokeCombBox);
             this.Controls.Add(this.jokeText);
             this.Controls.Add(this.jokeButton);
@@ -83,6 +94,7 @@ namespace ChuckNorrisAPIFormApp
         private System.Windows.Forms.Button jokeButton;
         private System.Windows.Forms.Label jokeText;
         private System.Windows.Forms.ComboBox jokeCombBox;
+        private System.Windows.Forms.Label jokeCategory;
     }
 }
 
