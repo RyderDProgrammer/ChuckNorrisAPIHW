@@ -25,7 +25,7 @@ namespace ChuckNorrisAPIFormApp
         {
             jokeText.Text = "";
             //Allows the user to get a joke from any category no exclusions.
-            jokeCombBox.Items.Add("any");
+            jokeCombBox.Items.Add("none");
             IEnumerable<string> categories = await ChuckNorrisClient.GetCategories();
             foreach (var cat in categories)
             {
@@ -42,7 +42,7 @@ namespace ChuckNorrisAPIFormApp
             {
                 excluded = jokeCombBox.SelectedItem.ToString();
             }
-            if(!excluded.Equals("any"))
+            if(!excluded.Equals("none"))
             {
                 Joke j = await ChuckNorrisClient.GetRandomJokeExcludeCategory(excluded);
                 jokeText.Text = j.JokeText;
@@ -52,11 +52,6 @@ namespace ChuckNorrisAPIFormApp
                 Joke j = await ChuckNorrisClient.GetRandomJoke();
                 jokeText.Text = j.JokeText;
             }
-        }
-
-        private void jokeCombBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            jokeButton.Text = "Push me for a " + jokeCombBox.SelectedItem.ToString() + " kind joke!";
         }
     }
 }
