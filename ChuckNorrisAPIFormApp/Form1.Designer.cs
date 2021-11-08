@@ -39,7 +39,7 @@ namespace ChuckNorrisAPIFormApp
             // 
             // jokeButton
             // 
-            this.jokeButton.Location = new System.Drawing.Point(12, 75);
+            this.jokeButton.Location = new System.Drawing.Point(12, 96);
             this.jokeButton.Name = "jokeButton";
             this.jokeButton.Size = new System.Drawing.Size(307, 115);
             this.jokeButton.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace ChuckNorrisAPIFormApp
             // jokeText
             // 
             this.jokeText.AutoSize = true;
-            this.jokeText.Location = new System.Drawing.Point(381, 75);
+            this.jokeText.Location = new System.Drawing.Point(381, 96);
             this.jokeText.Name = "jokeText";
             this.jokeText.Size = new System.Drawing.Size(27, 13);
             this.jokeText.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace ChuckNorrisAPIFormApp
             // jokeCombBox
             // 
             this.jokeCombBox.FormattingEnabled = true;
-            this.jokeCombBox.Location = new System.Drawing.Point(384, 191);
+            this.jokeCombBox.Location = new System.Drawing.Point(384, 174);
             this.jokeCombBox.Name = "jokeCombBox";
             this.jokeCombBox.Size = new System.Drawing.Size(121, 21);
             this.jokeCombBox.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace ChuckNorrisAPIFormApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(384, 259);
+            this.label2.Location = new System.Drawing.Point(384, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace ChuckNorrisAPIFormApp
             // categoryTextBox
             // 
             this.categoryTextBox.AutoSize = true;
-            this.categoryTextBox.Location = new System.Drawing.Point(457, 259);
+            this.categoryTextBox.Location = new System.Drawing.Point(457, 198);
             this.categoryTextBox.Name = "categoryTextBox";
             this.categoryTextBox.Size = new System.Drawing.Size(35, 13);
             this.categoryTextBox.TabIndex = 5;
