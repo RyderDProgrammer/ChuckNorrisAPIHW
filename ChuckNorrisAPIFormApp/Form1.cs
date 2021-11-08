@@ -24,8 +24,11 @@ namespace ChuckNorrisAPIFormApp
         private async void Form1_Load(object sender, EventArgs e)
         {
             jokeText.Text = "";
+            categoryTextBox.Text = "";
             //Allows the user to get a joke from any category no exclusions.
             jokeCombBox.Items.Add("none");
+            //Forces the user to start out with a choice instead of a blank box.
+            jokeCombBox.SelectedIndex = 0;
             IEnumerable<string> categories = await ChuckNorrisClient.GetCategories();
             foreach (var cat in categories)
             {
@@ -38,14 +41,13 @@ namespace ChuckNorrisAPIFormApp
             //Joke j = await ChuckNorrisClient.GetRandomJoke();
             //jokeText.Text = j.JokeText;
             string excluded = "";
-            if (jokeCombBox.SelectedIndex > -1)
-            {
-                excluded = jokeCombBox.SelectedItem.ToString();
-            }
-            if(!excluded.Equals("none"))
+            excluded = jokeCombBox.SelectedItem.ToString();
+            if (!excluded.Equals("none"))
             {
                 Joke j = await ChuckNorrisClient.GetRandomJokeExcludeCategory(excluded);
                 jokeText.Text = j.JokeText;
+                //Displays the category that the joke was retrieved from.
+                categoryTextBox.Text = string.Join("", j.Categories);
             }
             else
             {

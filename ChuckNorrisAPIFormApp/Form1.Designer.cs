@@ -33,6 +33,8 @@ namespace ChuckNorrisAPIFormApp
             this.jokeText = new System.Windows.Forms.Label();
             this.jokeCombBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.categoryTextBox = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // jokeButton
@@ -71,11 +73,31 @@ namespace ChuckNorrisAPIFormApp
             this.label1.TabIndex = 3;
             this.label1.Text = "Exclude This Category";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(384, 259);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Joke Category:";
+            // 
+            // categoryTextBox
+            // 
+            this.categoryTextBox.AutoSize = true;
+            this.categoryTextBox.Location = new System.Drawing.Point(457, 259);
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.Size = new System.Drawing.Size(35, 13);
+            this.categoryTextBox.TabIndex = 5;
+            this.categoryTextBox.Text = "label3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 450);
+            this.Controls.Add(this.categoryTextBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.jokeCombBox);
             this.Controls.Add(this.jokeText);
@@ -94,6 +116,8 @@ namespace ChuckNorrisAPIFormApp
         private System.Windows.Forms.Label jokeText;
         private System.Windows.Forms.ComboBox jokeCombBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label categoryTextBox;
     }
 }
 
