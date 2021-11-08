@@ -53,6 +53,7 @@ namespace ChuckNorrisAPIFormApp
             {
                 Joke j = await ChuckNorrisClient.GetRandomJoke();
                 jokeText.Text = j.JokeText;
+                categoryTextBox.Text = string.Join("", j.Categories);
             }
         }
     }
